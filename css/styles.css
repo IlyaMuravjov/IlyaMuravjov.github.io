@@ -11470,3 +11470,41 @@ iframe {
     display: none;
   }
 }
+
+.skill-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.skill-tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 106%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+/* triangle above tooltip */
+.skill-tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #000000 transparent;
+  margin-left: -5px;
+}
+
+.skill-tooltip:hover .tooltiptext {
+  visibility: visible;
+}
